@@ -1,6 +1,6 @@
 # Connect to Binance download crypto prices and calculate volatility
 
-# Connect to API
+# Connect to Binance API
 
     pip install binance-connector
 
