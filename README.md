@@ -1,6 +1,7 @@
 # Connect to Binance download crypto prices and calculate volatility
 
 #Connect to API
+
 pip install binance-connector
 from binance.spot import Spot
 import pandas as pd
