@@ -4,30 +4,31 @@
 
     pip install binance-connector
 
-from binance.spot import Spot
+    from binance.spot import Spot
 
-client = Spot()
+    client = Spot()
 
-import time
+    import time
 # Libraries
 
-import pandas as pd
+    import pandas as pd
 
-import matplotlib.pyplot as plt
+    import matplotlib.pyplot as plt
 
-import numpy as np
+    import numpy as np
 
-import math
+    import math
 
-import plotly.graph_objects as go
+    import plotly.graph_objects as go
 
 # Create DataFrame with data
-df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_asset_volume', 'number_of_trades', 'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume', 'ignore'])
+    df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_asset_volume', 'number_of_trades',                     
+    'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume', 'ignore'])
 
-df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+    df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
 
 # Setting graph
-fig = go.Figure(data=[go.Candlestick(x=df['timestamp'],
+    fig = go.Figure(data=[go.Candlestick(x=df['timestamp'],
 
                                      open=df['open'],
                                      
