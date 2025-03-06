@@ -2,7 +2,7 @@
 
 # Connect to API
 
-pip install binance-connector
+  pip install binance-connector
 
 from binance.spot import Spot
 
