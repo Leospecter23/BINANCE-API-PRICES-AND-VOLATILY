@@ -48,25 +48,25 @@
 
     fig.show()
 # Calculate daily returns as percentage price changes
-df['Close'] = df['close'].astype(float)
-df['Return'] = 100 * (df['Close'].pct_change()).dropna()
+    df['Close'] = df['close'].astype(float)
+    df['Return'] = 100 * (df['Close'].pct_change()).dropna()
 # View the data
 #print(df.tail(10))
 # Plot the price returns
-plt.plot(df['timestamp'],df['Return'], color = 'orange', label = 'Daily Returns')
-plt.legend(loc='upper right')
-plt.show()
+    plt.plot(df['timestamp'],df['Return'], color = 'orange', label = 'Daily Returns')
+    plt.legend(loc='upper right')
+    plt.show()
 
 # Calculate daily std of returns
-std_daily = df['Return'].std()
-print('Daily volatility: ', '{:.2f}%'.format(std_daily))
+    std_daily = df['Return'].std()
+    print('Daily volatility: ', '{:.2f}%'.format(std_daily))
 
 # Convert daily volatility to monthly volatility
-std_monthly = math.sqrt(21) * std_daily
-print ('Monthly volatility: ', '{:.2f}%'.format(std_monthly))
+    std_monthly = math.sqrt(21) * std_daily
+    print ('Monthly volatility: ', '{:.2f}%'.format(std_monthly))
 
 # Convert daily volatility to annaul volatility
-std_annual = math.sqrt(252) * std_daily
-print ('Annual volatility: ', '{:.2f}%'.format(std_annual))
+    std_annual = math.sqrt(252) * std_daily
+    print ('Annual volatility: ', '{:.2f}%'.format(std_annual))
 
 
