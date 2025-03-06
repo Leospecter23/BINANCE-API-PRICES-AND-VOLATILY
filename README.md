@@ -39,11 +39,13 @@
                                      close=df['close'])])
 
 #Titles and labels
+
     fig.update_layout(title=f'Precio de {symbol} en intervalos de {interval}',
                   xaxis_title='Tiempo',
                   yaxis_title='Precio (USD)')
 
 #Show graphic
+
     fig.show()
 # Calculate daily returns as percentage price changes
 df['Close'] = df['close'].astype(float)
